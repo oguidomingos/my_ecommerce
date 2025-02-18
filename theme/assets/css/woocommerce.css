@@ -1,0 +1,228 @@
+/* Reset geral */
+.single-product,
+.woocommerce-cart,
+.woocommerce-checkout {
+    padding: 0 !important;
+    background-color: #FFFFFF;
+}
+
+/* Estilos gerais do container */
+.container {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Estilos da página do carrinho */
+.woocommerce-cart-form table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.woocommerce-cart-form th {
+    font-weight: 600;
+    color: #2B2B2B;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.woocommerce-cart-form td {
+    vertical-align: middle;
+}
+
+.woocommerce-cart-form img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Controles de quantidade */
+.woocommerce-cart-form .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.woocommerce-cart-form .quantity input {
+    width: 3rem !important;
+    text-align: center;
+    border: none;
+    -moz-appearance: textfield;
+}
+
+.woocommerce-cart-form .quantity input::-webkit-outer-spin-button,
+.woocommerce-cart-form .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botões de quantidade */
+.quantity-btn {
+    background-color: #417B5A !important;
+    color: white !important;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: #7ED957 !important;
+}
+
+/* Botões de ação */
+.button {
+    background-color: #417B5A !important;
+    color: white !important;
+    padding: 0.75rem 1.5rem !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, transform 0.2s !important;
+}
+
+.button:hover {
+    background-color: #7ED957 !important;
+    transform: translateY(-2px);
+}
+
+/* Botão de aplicar cupom */
+.coupon .button {
+    margin-left: 0.5rem;
+}
+
+/* Botão de finalizar compra */
+.checkout-button {
+    display: block;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 1.125rem !important;
+    padding: 1rem !important;
+    margin-top: 1.5rem !important;
+    background-color: #FF7E1B !important;
+}
+
+.checkout-button:hover {
+    background-color: #417B5A !important;
+}
+
+/* Resumo do carrinho */
+.cart-collaterals {
+    margin-top: 2rem;
+}
+
+.cart-collaterals table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+.cart-collaterals th {
+    text-align: left;
+    padding: 1rem 0;
+    font-weight: normal;
+    color: #2B2B2B;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.cart-collaterals td {
+    text-align: right;
+    padding: 1rem 0;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.cart-collaterals tr:last-child th,
+.cart-collaterals tr:last-child td {
+    border-bottom: none;
+}
+
+.cart-collaterals .order-total th,
+.cart-collaterals .order-total td {
+    font-weight: bold;
+    color: #2B2B2B;
+    font-size: 1.25rem;
+}
+
+/* Links do carrinho */
+.woocommerce-cart a:not(.checkout-button):not(.add_to_cart_button) {
+    color: #2B2B2B;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.woocommerce-cart a:not(.checkout-button):not(.add_to_cart_button):hover {
+    color: #417B5A;
+}
+
+/* Campos de input */
+.coupon input {
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #F5F5F5;
+    border-radius: 0.5rem;
+}
+
+/* Mensagens de erro/sucesso */
+.woocommerce-error,
+.woocommerce-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.woocommerce-error {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #F87171;
+}
+
+.woocommerce-message {
+    background-color: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #34D399;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .woocommerce-cart thead {
+        display: none;
+    }
+
+    .woocommerce-cart-form tr {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #F5F5F5;
+        padding: 1rem 0;
+    }
+
+    .woocommerce-cart-form td {
+        padding: 0.5rem;
+        width: 50%;
+        text-align: right;
+    }
+
+    .woocommerce-cart-form td:first-child {
+        width: 100%;
+        text-align: left;
+    }
+
+    .coupon {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .coupon .button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .woocommerce-cart-form td {
+        width: 100%;
+    }
+}
